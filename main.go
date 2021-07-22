@@ -6,9 +6,8 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
-
 	"net/http"
-
+	
 	"github.com/blockchain.com/comments/sdkInit"
 	"github.com/blockchain.com/comments/service"
 	"github.com/blockchain.com/comments/web"
@@ -275,7 +274,7 @@ func main() {
 	initInfo := &sdkInit.InitInfo{
 
 		ChannelID:     "mychannel",
-		ChannelConfig: "/home/star/go/src/github.com/blockchain.com/comments/fixtures/network-base/channel-artifacts/channel.tx",
+		ChannelConfig: "/home/star/go/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/channel-artifacts/channel.tx",
 
 		OrgAdmin:       "Admin",
 		Org1Name:       "Org1",
@@ -284,7 +283,7 @@ func main() {
 
 		ChaincodeID:     ComCC,
 		ChaincodeGoPath: os.Getenv("GOPATH"),
-		ChaincodePath:   "github.com/blockchain.com/commentsV2_edu/chaincode/",
+		ChaincodePath:   "github.com/Fenrisku/blockchain-comments/chaincode/",
 		UserName:        "User1",
 	}
 
