@@ -1,5 +1,15 @@
 package main
 
+// @title Comments-Blockchain API
+// @version 1.0
+// @description This is a server for comments data of blockchain system.
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host chen-v1:8000
+// @BasePath /
+
 import (
 	"encoding/json"
 	"fmt"
@@ -15,6 +25,7 @@ import (
 	"github.com/hyperledger/fabric-sdk-go/pkg/client/channel"
 	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
 )
+
 //fabric版本1.4
 const (
 	configFile  = "config.yaml"
@@ -329,7 +340,7 @@ func main() {
 	}
 
 	//启动区块链程序写入模拟数据
-	writeflag:=false
+	writeflag := false
 	if writeflag {
 		total := len(com)
 		//数据上链
