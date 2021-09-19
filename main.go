@@ -1,5 +1,6 @@
 package main
 
+<<<<<<< HEAD
 // @title Comments-Blockchain API
 // @version 1.0
 // @description This is a server for comments data of blockchain system.
@@ -10,22 +11,32 @@ package main
 // @host chen-v1:8000
 // @BasePath /
 
+=======
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"strconv"
+<<<<<<< HEAD
 
 	"net/http"
 
+=======
+	"net/http"
+	
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	"github.com/blockchain.com/comments/sdkInit"
 	"github.com/blockchain.com/comments/service"
 	"github.com/blockchain.com/comments/web"
 	"github.com/hyperledger/fabric-sdk-go/pkg/client/channel"
 	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 //fabric版本1.4
 const (
 	configFile  = "config.yaml"
@@ -286,7 +297,11 @@ func main() {
 	initInfo := &sdkInit.InitInfo{
 
 		ChannelID:     "mychannel",
+<<<<<<< HEAD
 		ChannelConfig: "/home/star/go/src/github.com/blockchain.com/comments/fixtures/network-base/channel-artifacts/channel.tx",
+=======
+		ChannelConfig: "/home/star/go/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/channel-artifacts/channel.tx",
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
 		OrgAdmin:       "Admin",
 		Org1Name:       "Org1",
@@ -295,7 +310,11 @@ func main() {
 
 		ChaincodeID:     ComCC,
 		ChaincodeGoPath: os.Getenv("GOPATH"),
+<<<<<<< HEAD
 		ChaincodePath:   "github.com/blockchain.com/commentsV2_edu/chaincode/",
+=======
+		ChaincodePath:   "github.com/Fenrisku/blockchain-comments/chaincode/",
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 		UserName:        "User1",
 	}
 
@@ -340,7 +359,11 @@ func main() {
 	}
 
 	//启动区块链程序写入模拟数据
+<<<<<<< HEAD
 	writeflag := false
+=======
+	writeflag:=false
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	if writeflag {
 		total := len(com)
 		//数据上链
@@ -394,7 +417,10 @@ func main() {
 
 	//溯源查询结果分类
 	mapcom := traceSort(TraceCom, serviceSetup)
+<<<<<<< HEAD
 	//查询结果按课程名分类
+=======
+>>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
 	//===========================================//
 	//启动后端网路服务
