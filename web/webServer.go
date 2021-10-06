@@ -1,6 +1,5 @@
 package web
 
-<<<<<<< HEAD
 // GetPostListHandler2 升级版帖子列表接口
 // @Summary 升级版帖子列表接口
 // @Description 可按社区按时间或分数排序查询帖子列表接口
@@ -13,14 +12,11 @@ package web
 // @Success 200 {object} _ResponsePostList
 // @Router /posts2 [get]
 
-=======
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 import (
 	"log"
 	"net/http"
 	"strconv"
 
-<<<<<<< HEAD
 	_ "github.com/blockchain.com/comments/docs" // 千万不要忘了导入把你上一步生成的docs
 
 	"github.com/blockchain.com/comments/service"
@@ -43,22 +39,6 @@ import (
 // @Router /tracecom [get]
 func GetTraceCom(router *gin.Engine, tracecom []service.Comment) {
 
-=======
-	"github.com/blockchain.com/comments/service"
-
-	"github.com/gin-gonic/gin"
-)
-
-// 启动Web服务并指定路由信息
-func WebStart(total service.BlockCount, count []service.BlockCount, tracecom []service.Comment, classinfo []service.Class, classcom map[int][]service.Comment) {
-
-	router := gin.Default()
-
-	//------------朔源----------------------
-	router.Use(Cors())
-
-	//tracecom?start=&size=
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	router.Handle("GET", "/tracecom", func(c *gin.Context) {
 		s := c.Query("start")
 		st, err := strconv.Atoi(s)
@@ -81,7 +61,6 @@ func WebStart(total service.BlockCount, count []service.BlockCount, tracecom []s
 		tempMap["data"] = result
 		c.JSON(http.StatusOK, tempMap)
 	})
-<<<<<<< HEAD
 }
 
 // @Summary 获取每门课程评分
@@ -93,17 +72,11 @@ func WebStart(total service.BlockCount, count []service.BlockCount, tracecom []s
 // @Failure 400 {string} string "{"msg": "FAIL}"
 // @Router /count [get]
 func GetCount(router *gin.Engine, count []service.BlockCount) {
-=======
-
-	//------------记数----------------------
-
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	router.Handle("GET", "/count", func(c *gin.Context) {
 		tempMap := make(map[string]interface{})
 		tempMap["data"] = count
 		c.JSON(http.StatusOK, tempMap)
 	})
-<<<<<<< HEAD
 }
 
 // @Summary 获取总评分
@@ -115,14 +88,11 @@ func GetCount(router *gin.Engine, count []service.BlockCount) {
 // @Failure 400 {string} string "{"msg": "FAIL}"
 // @Router /count/total [get]
 func GetTotalCount(router *gin.Engine, total service.BlockCount) {
-=======
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	router.Handle("GET", "/count/total", func(c *gin.Context) {
 		tempMap := make(map[string]interface{})
 		tempMap["data"] = total
 		c.JSON(http.StatusOK, tempMap)
 	})
-<<<<<<< HEAD
 }
 
 // @Summary 获取课程信息
@@ -136,10 +106,6 @@ func GetTotalCount(router *gin.Engine, total service.BlockCount) {
 // @Failure 400 {string} string "{"msg": "FAIL}"
 // @Router /classinfo [get]
 func GetClassInfo(router *gin.Engine, classinfo []service.Class) {
-=======
-
-	//-------------商店信息----------------
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	router.Handle("GET", "/classinfo", func(c *gin.Context) {
 		s := c.Query("start")
 		st, err := strconv.Atoi(s)
@@ -162,7 +128,6 @@ func GetClassInfo(router *gin.Engine, classinfo []service.Class) {
 		tempMap["data"] = result
 		c.JSON(http.StatusOK, tempMap)
 	})
-<<<<<<< HEAD
 }
 
 // @Summary 获取课程评价
@@ -177,10 +142,6 @@ func GetClassInfo(router *gin.Engine, classinfo []service.Class) {
 // @Failure 400 {string} string "{"msg": "FAIL}"
 // @Router /classcom [get]
 func GetClassComment(router *gin.Engine, classcom map[int][]service.Comment) {
-=======
-
-	//-------------评论信息----------------
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 	router.Handle("GET", "/classcom", func(c *gin.Context) {
 		s := c.Query("cid")
 		cid, _ := strconv.Atoi(s)
@@ -207,7 +168,6 @@ func GetClassComment(router *gin.Engine, classcom map[int][]service.Comment) {
 		tempMap["data"] = result
 		c.JSON(http.StatusOK, tempMap)
 	})
-<<<<<<< HEAD
 }
 
 func WebStart(total service.BlockCount, count []service.BlockCount, tracecom []service.Comment, classinfo []service.Class, classcom map[int][]service.Comment) {
@@ -228,18 +188,12 @@ func WebStart(total service.BlockCount, count []service.BlockCount, tracecom []s
 	GetClassComment(router, classcom)
 
 	router.GET("/api/*any", gs.WrapHandler(swaggerFiles.Handler))
-=======
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
 	router.Run(":8000")
 
 }
 
-<<<<<<< HEAD
 //关闭跨域，仅用于跨域
-=======
-//关闭跨域，仅用于测试
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 func Cors() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		method := c.Request.Method

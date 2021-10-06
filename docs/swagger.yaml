@@ -1,0 +1,149 @@
+basePath: /
+host: chen-v1:8000
+info:
+  contact:
+    email: fenrisku@163.com
+    name: Fenrisku
+    url: https://github.com
+  description: This is a server for comments data of blockchain system.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://github.com
+  title: Comments-Blockchain API
+  version: "1.0"
+paths:
+  /classcom:
+    get:
+      consumes:
+      - multipart/form-data
+      description: /classcom?cid=&start=&size=
+      parameters:
+      - description: cid
+        in: query
+        name: cid
+        required: true
+        type: string
+      - description: 开始数
+        in: query
+        name: start
+        required: true
+        type: string
+      - description: 查询数量
+        in: query
+        name: size
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg": "SUCCESS"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "FAIL}'
+          schema:
+            type: string
+      summary: 获取课程评价
+      tags:
+      - 获取评价信息
+  /classinfo:
+    get:
+      consumes:
+      - multipart/form-data
+      description: /tracecom?cid=&start=&size=
+      parameters:
+      - description: 开始数
+        in: query
+        name: start
+        required: true
+        type: string
+      - description: 查询数量
+        in: query
+        name: size
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg": "SUCCESS"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "FAIL}'
+          schema:
+            type: string
+      summary: 获取课程信息
+      tags:
+      - 获取课程信息
+  /count:
+    get:
+      consumes:
+      - multipart/form-data
+      description: /count
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg": "SUCCESS"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "FAIL}'
+          schema:
+            type: string
+      summary: 获取每门课程评分
+      tags:
+      - 获取评分
+  /count/total:
+    get:
+      consumes:
+      - multipart/form-data
+      description: /count/toal
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg": "SUCCESS"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "FAIL}'
+          schema:
+            type: string
+      summary: 获取总评分
+      tags:
+      - 获取评分
+  /tracecom:
+    get:
+      consumes:
+      - multipart/form-data
+      description: tracecom?start=&size=
+      parameters:
+      - description: 开始数
+        in: query
+        name: start
+        required: true
+        type: string
+      - description: 查询数量
+        in: query
+        name: size
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg": "SUCCESS"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "FAIL}'
+          schema:
+            type: string
+      summary: 评价数据不分类查询
+      tags:
+      - 获取评价信息
+swagger: "2.0"

@@ -1,0 +1,222 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a server for comments data of blockchain system.",
+        "title": "Comments-Blockchain API",
+        "termsOfService": "https://github.com",
+        "contact": {
+            "name": "Fenrisku",
+            "url": "https://github.com",
+            "email": "fenrisku@163.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "chen-v1:8000",
+    "basePath": "/",
+    "paths": {
+        "/classcom": {
+            "get": {
+                "description": "/classcom?cid=\u0026start=\u0026size=",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "获取评价信息"
+                ],
+                "summary": "获取课程评价",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "cid",
+                        "name": "cid",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "开始数",
+                        "name": "start",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "查询数量",
+                        "name": "size",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"msg\": \"SUCCESS\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"msg\": \"FAIL}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/classinfo": {
+            "get": {
+                "description": "/tracecom?cid=\u0026start=\u0026size=",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "获取课程信息"
+                ],
+                "summary": "获取课程信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "开始数",
+                        "name": "start",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "查询数量",
+                        "name": "size",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"msg\": \"SUCCESS\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"msg\": \"FAIL}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/count": {
+            "get": {
+                "description": "/count",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "获取评分"
+                ],
+                "summary": "获取每门课程评分",
+                "responses": {
+                    "200": {
+                        "description": "{\"msg\": \"SUCCESS\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"msg\": \"FAIL}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/count/total": {
+            "get": {
+                "description": "/count/toal",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "获取评分"
+                ],
+                "summary": "获取总评分",
+                "responses": {
+                    "200": {
+                        "description": "{\"msg\": \"SUCCESS\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"msg\": \"FAIL}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/tracecom": {
+            "get": {
+                "description": "tracecom?start=\u0026size=",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "获取评价信息"
+                ],
+                "summary": "评价数据不分类查询",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "开始数",
+                        "name": "start",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "查询数量",
+                        "name": "size",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"msg\": \"SUCCESS\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"msg\": \"FAIL}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

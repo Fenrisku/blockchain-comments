@@ -58,11 +58,7 @@ client:
 
   # Root of the MSP directories with keys and certs.
   cryptoconfig:
-<<<<<<< HEAD
     path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config
-=======
-    path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   # Some SDKs support pluggable KV stores, the properties under "credentialStore"
   # are implementation specific
@@ -91,15 +87,9 @@ client:
     # [Optional]. Client key and cert for TLS handshake with peers and orderers
     client:
       key:
-<<<<<<< HEAD
         path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.key
       cert:
         path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.crt
-=======
-        path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.key
-      cert:
-        path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.crt
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
 #
 # [Optional]. But most apps would have this section so that channel objects can be constructed
@@ -290,11 +280,7 @@ orderers:
 
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
-=======
-      path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
       # path: ${GOPATH}/src/github.com/hyperledger/fabric-sdk-go/${CRYPTOCONFIG_FIXTURES_PATH}/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
   
   orderer2.example.com:
@@ -309,11 +295,7 @@ orderers:
       allow-insecure: false
 
     tlsCACerts:
-<<<<<<< HEAD
       path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
-=======
-      path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   orderer3.example.com:
     url: orderer3.example.com:9050
@@ -327,11 +309,7 @@ orderers:
       allow-insecure: false
 
     tlsCACerts:
-<<<<<<< HEAD
       path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
-=======
-      path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   orderer4.example.com:
     url: orderer4.example.com:10050
@@ -345,11 +323,7 @@ orderers:
       allow-insecure: false
 
     tlsCACerts:
-<<<<<<< HEAD
       path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
-=======
-      path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   orderer5.example.com:
     url: orderer5.example.com:11050
@@ -363,11 +337,7 @@ orderers:
       allow-insecure: false
 
     tlsCACerts:
-<<<<<<< HEAD
       path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
-=======
-      path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
 #
 # List of peers to send various requests to, including endorsement, query
@@ -394,11 +364,7 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path:  ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
-=======
-      path:  ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   peer1.org1.example.com:
     # this URL is used to send endorsement and query requests
@@ -420,11 +386,7 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
-=======
-      path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   peer0.org2.example.com:
     # this URL is used to send endorsement and query requests
@@ -446,11 +408,7 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path:  ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem
-=======
-      path:  ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
   peer1.org2.example.com:
     # this URL is used to send endorsement and query requests
@@ -472,11 +430,7 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path:  ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem
-=======
-      path:  ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
 #
 # Fabric-CA is a special kind of Certificate Authority provided by Hyperledger Fabric which allows
@@ -488,7 +442,6 @@ certificateAuthorities:
     url: https://ca.org1.example.com:7054
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path:  ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem
       
       client:
@@ -496,15 +449,6 @@ certificateAuthorities:
           path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.key
         cert:
           path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.crt
-=======
-      path:  ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem
-      
-      client:
-        key:
-          path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.key
-        cert:
-          path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.crt
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
     # Fabric-CA supports dynamic user enrollment via REST APIs. A "root" user, a.k.a registrar, is
     # needed to enroll and invoke new users.
     registrar:
@@ -517,7 +461,6 @@ certificateAuthorities:
     url: http://ca.org2.example.com:8054
     tlsCACerts:
       # Certificate location absolute path
-<<<<<<< HEAD
       path:  ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/ca/ca.org2.example.com-cert.pem
 
       client:
@@ -525,15 +468,6 @@ certificateAuthorities:
           path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/tls/client.key
         cert:
           path: ${GOPATH}/src/github.com/blockchain.com/commentsV2/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/tls/client.crt
-=======
-      path:  ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/ca/ca.org2.example.com-cert.pem
-
-      client:
-        key:
-          path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/tls/client.key
-        cert:
-          path: ${GOPATH}/src/github.com/Fenrisku/blockchain-comments/fixtures/network-base/crypto-config/peerOrganizations/org2.example.com/users/User1@org2.example.com/tls/client.crt
->>>>>>> 551280bd8cc06eef588f570b7b3f2640355d53d1
 
     # Fabric-CA supports dynamic user enrollment via REST APIs. A "root" user, a.k.a registrar, is
     # needed to enroll and invoke new users.
